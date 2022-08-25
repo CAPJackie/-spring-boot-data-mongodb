@@ -5,12 +5,6 @@
 - Create a MongoDB Cluster on Atlas.
 - Connect your Spring Boot project with a MongoDB Cluster.
 
-
-## Detail Orientation 🤹🏽
-
-Read the following document [Attention to details](https://www.csu.edu/humanresources/empdev/documents/AttentiontoDetail.pdf) 
-
-
 ## Main Topics
 
 * NoSQL.
@@ -20,10 +14,6 @@ Read the following document [Attention to details](https://www.csu.edu/humanreso
 
 
 ## Codelab 🧪
-
-🗣️ "I hear and I forget I see and I remember I do and I understand." Confucius
-
-
 ### Part 1: Creating your Atlas account and first cluster:
 
 If you haven't created your MongoDB Cluster follow part 1 - 4:
@@ -58,6 +48,7 @@ If you haven't created your MongoDB Cluster follow part 1 - 4:
         }
     ```
 8. Run your project and verify that the connection is successful.
+9. To avoid future problems connecting to your Atlas instance (because of ip whitelist) find the way to allow connections from any Ip (not recommended for real-world applications)
 
 ### Part 3: Implementing the MongoDB Service
 
@@ -140,7 +131,7 @@ If you haven't created your MongoDB Cluster follow part 1 - 4:
              }
          
              @Override
-             public User update( UserDto userDto, String id )
+             public UserDto update( User user, String id )
              {
                  return null;
              }
